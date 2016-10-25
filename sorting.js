@@ -195,3 +195,29 @@ function shellSort(arr) {
 var a = [4, 5, 30, 2, 430, 22, 54];
 console.log(shellSort(a));
 
+/**
+ * 简单选择排序
+ */
+function selectionSort(arr) {
+
+  for (var i = 0, len = arr.length; i < len; i++) {
+    var pos = i;
+    for (var j = i; j < len; j++) {
+      if (arr[j] < arr[pos]) {
+        pos = j;
+      }
+    }
+    var temp = arr[i];
+    arr[i] = arr[pos];
+    arr[pos] = temp;
+
+  }
+  
+  return arr;
+}
+var a = [4, 5, 30, 2, 430, 22, 54];
+console.log(selectionSort(a));
+
+/**
+ * 堆排序
+ */
